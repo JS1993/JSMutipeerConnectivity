@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vhb-br-sp7">
+                                <rect key="frame" x="40" y="80" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="sGC-dL-YAt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-RD-TW8">
+                                <rect key="frame" x="130" y="242" width="60" height="30"/>
+                                <state key="normal" title="连接设备"/>
+                                <connections>
+                                    <action selector="connectDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kju-0b-QPo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QY1-Cc-7BG">
+                                <rect key="frame" x="130" y="280" width="60" height="30"/>
+                                <state key="normal" title="选择图片"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1LL-HO-WMu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tg8-yE-9kQ">
+                                <rect key="frame" x="130" y="318" width="60" height="30"/>
+                                <state key="normal" title="发送图片"/>
+                                <connections>
+                                    <action selector="sendImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zYr-bs-ZVf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否可以被搜索到" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-Rt-lCZ">
+                                <rect key="frame" x="20" y="373" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aC-hu-ALB">
+                                <rect key="frame" x="215" y="368" width="51" height="31"/>
+                                <connections>
+                                    <action selector="isCanBeFound:" destination="BYZ-38-t0r" eventType="valueChanged" id="ghy-aG-mme"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8aC-hu-ALB" firstAttribute="leading" secondItem="4gC-Rt-lCZ" secondAttribute="trailing" constant="59" id="8Tv-sS-n5u"/>
+                            <constraint firstItem="QY1-Cc-7BG" firstAttribute="top" secondItem="x4g-RD-TW8" secondAttribute="bottom" constant="8" id="P0k-hU-eHq"/>
+                            <constraint firstItem="4gC-Rt-lCZ" firstAttribute="top" secondItem="tg8-yE-9kQ" secondAttribute="bottom" constant="25" id="WUd-TS-Ed9"/>
+                            <constraint firstItem="vhb-br-sp7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="Xer-lm-Z3R"/>
+                            <constraint firstItem="x4g-RD-TW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aTZ-fy-gxq"/>
+                            <constraint firstItem="vhb-br-sp7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="anm-Qo-sN1"/>
+                            <constraint firstItem="tg8-yE-9kQ" firstAttribute="top" secondItem="QY1-Cc-7BG" secondAttribute="bottom" constant="8" id="cQN-RQ-tOB"/>
+                            <constraint firstAttribute="trailing" secondItem="vhb-br-sp7" secondAttribute="trailing" constant="40" id="jKk-Bc-lym"/>
+                            <constraint firstItem="QY1-Cc-7BG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lta-Ym-Eh1"/>
+                            <constraint firstItem="4gC-Rt-lCZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nb0-BP-vag"/>
+                            <constraint firstItem="tg8-yE-9kQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ppH-oj-UQ3"/>
+                            <constraint firstItem="8aC-hu-ALB" firstAttribute="centerY" secondItem="4gC-Rt-lCZ" secondAttribute="centerY" id="qpQ-mb-ukV"/>
+                            <constraint firstItem="x4g-RD-TW8" firstAttribute="top" secondItem="vhb-br-sp7" secondAttribute="bottom" constant="34" id="rSv-Un-pkY"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="showImageV" destination="vhb-br-sp7" id="fHz-dv-9hW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
