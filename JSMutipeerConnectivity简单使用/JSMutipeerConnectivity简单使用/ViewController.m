@@ -112,9 +112,11 @@
 //接收到数据时
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID{
     
+    dispatch_async(dispatch_get_main_queue(), ^{
     if (data!=nil) {
         self.showImageV.image=[UIImage imageWithData:data];
     }
+    });
     
 }
 
